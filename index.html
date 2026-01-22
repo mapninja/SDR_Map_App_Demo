@@ -44,12 +44,12 @@
 
 // add COG layer using georaster-layer-for-leaflet    
 
-    var url_to_geotiff_file = new URL("https://web.stanford.edu/~maples/cog/collection/stanford_campus_irg.tif", //window.location.href).href;
+    var url_to_geotiff_file = new URL("https://stacks.stanford.edu/file/px356nx6116/stanford_campus_irg.tif", //window.location.href).href;
 
 parseGeoraster(url_to_geotiff_file).then(georaster => {
   console.log("georaster:", georaster);
 
-  fetch("https://web.stanford.edu/~maples/cog/collection/stanford_campus.geojson")
+  fetch("https://stacks.stanford.edu/file/px356nx6116/stanford_campus.geojson")
     .then(r => r.json())
     .then(maskGeojson => {
       var layer = new GeoRasterLayer({
@@ -65,7 +65,7 @@ parseGeoraster(url_to_geotiff_file).then(georaster => {
 }).catch(console.error);
 
     // Load GeoJSON data
-    fetch('https://web.stanford.edu/~maples/cog/collection/stanford_public_art.geojson')
+    fetch('https://stacks.stanford.edu/file/px356nx6116/stanford_public_art.geojson')
         .then(response => response.json())
         .then(data => {
             // Add GeoJSON layer with custom circle markers and popups
