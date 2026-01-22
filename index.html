@@ -44,7 +44,7 @@
 
 // add COG layer using georaster-layer-for-leaflet    
 
-    var url_to_geotiff_file = new URL("https://web.stanford.edu/~maples/cog/collection/stanford_campus_irg.tif", window.location.href).href;
+    var url_to_geotiff_file = new URL("https://web.stanford.edu/~maples/cog/collection/stanford_campus_irg.tif", //window.location.href).href;
 
 parseGeoraster(url_to_geotiff_file).then(georaster => {
   console.log("georaster:", georaster);
